@@ -45,7 +45,7 @@ function FeedbackForm({ handleAdd }) {
                <input
                   onChange={handleTextChange}
                   type='text'
-                  placeholder='Write a Review'
+                  placeholder='  Write a Review '
                   value={text}
                />
                <Button type='submit' isDisabled={btnDisabled}>
