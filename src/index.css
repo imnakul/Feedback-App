@@ -8,7 +8,11 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #202142;
+  /* background-color: #202142; */
+  background-image: url('./resources/pexels-pixabay-531880.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
   color: #fff;
   line-height: 1.6;
 }
