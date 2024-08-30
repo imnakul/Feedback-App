@@ -9,7 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   /* background-color: #202142; */
-  background-image: url('./resources/pexels-pixabay-531880.jpg');
+  background-image: url('./resources/46042.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   
@@ -37,9 +37,11 @@ header {
 }
 
 .card {
-  background-color: #fff;
+  background-color: #fffefd;
+  opacity: 0.8;
   color: #333;
   border-radius: 15px;
+  border-style: solid;
   padding: 40px 50px;
   margin: 20px 0;
   position: relative;
@@ -66,8 +68,9 @@ header {
 .rating li,
 .num-display {
   position: relative;
-  /* background: #f4f4f4; added below line, bcz i m using black theme */
-  background: black; 
+  /* background: #f4f4f4;  */
+  /* added below line, bcz i m using black theme, above line is the default one */
+  background: rgb(24, 24, 23); 
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -92,7 +95,7 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: #ff6a95;
+  background: #f18008;
   color: #fff;
 }
 
@@ -101,7 +104,7 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: #ff6a95;
+  background: #e79a0c;
   color: #fff;
 }
 
@@ -147,7 +150,7 @@ input:focus {
 }
 
 .edit {
-  right: 40px;
+  right: 50px;
 }
 
 .btn {
