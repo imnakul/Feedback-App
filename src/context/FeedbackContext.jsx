@@ -18,15 +18,34 @@ export const FeedbackProvider = ({ children }) => {
 
    //Fetch Feedback
    const fetchFeedback = async () => {
-      const response = await fetch("/feedback?sort=id&_order=desc");
+      const response = await fetch("/feedback?sort=id&_order=asc");
       const data = await response.json();
-      setFeedback(data);
+
+      //Server side no sorting , so as it is data
+      /*setFeedback(data);
+      setIsLoading(false);*/
+
+      //Doing client side sorting to Keep/show most recent feedback at top
+      const sortedData = data.sort((a, b) => b.id - a.id);
+      setFeedback(sortedData);
       setIsLoading(false);
    };
 
-   //to add feedback
+   //add feedback id creation automatic - random alphanumeric number changed to Incrementing id number
    const addFeedback = async (newFeedback) => {
-      const response = await fetch("/feedback", {
+      // Fetch existing feedback to determine the max ID
+      const response = await fetch("/feedback");
+      const feedback = await response.json();
+      const maxId =
+         feedback.length > 0
+            ? Math.max(...feedback.map((item) => parseInt(item.id, 10)))
+            : 0;
+
+      // Set the new ID
+      newFeedback.id = (maxId + 1).toString();
+
+      // Add the new feedback with the incremented ID
+      const postResponse = await fetch("/feedback", {
          method: "POST",
          headers: {
             "Content-Type": "application/json",
@@ -34,7 +53,7 @@ export const FeedbackProvider = ({ children }) => {
          body: JSON.stringify(newFeedback),
       });
 
-      const data = await response.json();
+      const data = await postResponse.json();
 
       setFeedback([data, ...feedback]);
    };

@@ -9,7 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   /* background-color: #202142; */
-  background-image: url('./resources/46042.jpg');
+  background-image: url('./resources/bcae7aec-4402-42e7-abc5-cf6955f53b0a.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   
@@ -95,7 +95,7 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: #f18008;
+ background: #17f30f; 
   color: #fff;
 }
 
@@ -104,7 +104,7 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: #e79a0c;
+  background: #17f30f;
   color: #fff;
 }
 
@@ -164,7 +164,7 @@ input:focus {
 }
 
 .btn-primary {
-  background-color: #202142;
+  background-color: #17f30f;
 }
 
 .btn-secondary {
@@ -190,7 +190,7 @@ input:focus {
 .message {
   padding-top: 10px;
   text-align: center;
-  color: rebeccapurple;
+  color: rgb(20, 223, 250);
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
