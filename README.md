@@ -65,3 +65,11 @@ flowchart TD
      --> V{{now adding Update function which we will apply on editFeedback }}
 ```
 
++ Some Website Looks:
+![image](https://github.com/user-attachments/assets/752c9f0a-85b2-4aef-b9cf-fe423b59af3e)
+
+![image](https://github.com/user-attachments/assets/03d14a0b-14a7-453b-a843-d98e21f9e33d)
+
+![image](https://github.com/user-attachments/assets/197b47cb-5d1e-45bb-a63d-2c6da11b319e)
+
+
